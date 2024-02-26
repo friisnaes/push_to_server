@@ -1,0 +1,27 @@
+$ cd ~
+$ wget https://github.com/ethereum/staking-deposit-cli/releases/download/v2.7.0/staking_deposit-cli-fdab65d-linux-amd64.tar.gz
+$ tar xvf staking_deposit-cli-fdab65d-linux-amd64.tar.gz
+$ rm staking_deposit-cli-fdab65d-linux-amd64.tar.gz
+$ cd staking_deposit-cli-fdab65d-linux-amd64/
+$ ./deposit new-mnemonic --num_validators 1 --chain holesky --execution_address 0x4D496CcC28058B1D74B7a19541663E21154f9c84
+$ ls -d $PWD/validator_keys/*
+
+
+holesky metamask
+0xE9393F8f15041343b98AFB20C6F352439E655fe1
+
+holesky withdrawel mask
+0x4D496CcC28058B1D74B7a19541663E21154f9c84
+
+EthStaker Bot
+BOT
+ — Today at 5:13 PM
+You can now perform 2 cheap deposits on https://holesky.launchpad.ethstaker.cc/ with your wallet address 0xE9393F8f15041343b98AFB20C6F352439E655fe1. 
+Make sure to check out the guides and tools for configuring your machine to run a validator on Holesky in ⁠official-links.
+
+You must set your withdrawal address to 0x4D496CcC28058B1D74B7a19541663E21154f9c84 when creating your validator keys and your deposit file in order to use this process and to complete your deposit. 
+This is only required for this launchpad. When on Mainnet, you should use a withdrawal address you control if you want to use one.
+
+Performing this deposit transaction can cost more in gas than the actual cheap deposit cost of 0.0001 Holesky ETH during time of high gas price.
+If you end up in this situation, you can either try to obtain more Holesky ETH from https://faucetlink.to/holesky, you can wait until gas price come down (see https://holesky.beaconcha.in/gasnow to monitor gas price on Holesky)
+or you can broadcast your transaction with a custom low gas price and wait until it is picked up by the network for @mammutmanden.
