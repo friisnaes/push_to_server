@@ -13,7 +13,29 @@ holesky metamask
 holesky withdrawel mask
 0x4D496CcC28058B1D74B7a19541663E21154f9c84
 
+[Unit]
+Description=Nimbus Consensus Client (Goerli Test Network)
+Wants=network-online.target
+After=network-online.target
+[Service]
+User=nimbus
+Group=nimbus
+Type=simple
+Restart=always
+RestartSec=5
+ExecStart=/usr/local/bin/nimbus_beacon_node \
+  --network=goerli \
+  --data-dir=/var/lib/nimbus \
+  --web3-url=http://127.0.0.1:8551 \
+  --jwt-secret=/var/lib/jwtsecret/jwt.hex \
+  --suggested-fee-recipient=FeeRecipientAddress \
+  --graffiti="<yourgraffiti>" \
+  --metrics
+[Install]
+WantedBy=multi-user.target
 EthStaker Bot
+
+
 BOT
  — Today at 5:13 PM
 You can now perform 2 cheap deposits on https://holesky.launchpad.ethstaker.cc/ with your wallet address 0xE9393F8f15041343b98AFB20C6F352439E655fe1. 
